@@ -1,5 +1,75 @@
-﻿class
+﻿class Employer //работодатель
+{
+String name
+String phone
+String site
+String info // о компании
 
-переменные
+Job job //вакансия компании
 
-ввв
+}
+
+class Worker // работник_соискатель
+{
+String name
+String lastname
+String secondname
+
+int age
+
+String email
+String phone
+
+Resume resume
+
+}
+
+class Job //вакансия
+{
+String job_name
+String job_city
+String job_info
+
+}
+
+class Resume // резюме
+{
+String job_name //Желаемая должность
+String job_city
+String salary //Желаемая зарплата
+
+Language language 
+
+Education  education 
+
+String info
+
+}
+
+??ArrayList language //языки - массив языков
+либо 
+class Language 
+{ String language_name 
+String skill //степень владения
+}
+
+
+
+class Education //образование 
+{
+String (Date?? как лучше?)year //год
+String institution //учебное заведение
+}
+
+class JobExperience //опыт работы 
+{
+String start // начало работы
+String finish //конец работы
+
+Employer employer //работодатель
+
+}
+
+
+
+
