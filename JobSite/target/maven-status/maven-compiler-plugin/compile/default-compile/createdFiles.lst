@@ -1,0 +1,9 @@
+Job\Job.class
+Worker\JobExperience.class
+Worker\Sex.class
+Education\Education.class
+Employer\Employer.class
+Main\Main.class
+Resume\Resume.class
+Language\Language.class
+Worker\Worker.class
