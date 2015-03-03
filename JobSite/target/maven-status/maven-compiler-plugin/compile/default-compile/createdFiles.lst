@@ -1,7 +1,7 @@
 Job\Job.class
 Worker\JobExperience.class
 Worker\Sex.class
-Education\Education.class
+Worker\Education.class
 Employer\Employer.class
 Main\Main.class
 Resume\Resume.class

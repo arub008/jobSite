@@ -15,6 +15,8 @@ public enum Sex {
         
     }
 
+
+
     @Override
     public String toString(){
         return " пол: " + name;
