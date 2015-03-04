@@ -1,4 +1,5 @@
-import java.time.LocalDate;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 /**
  * Created by Anastasya on 02.03.2015.
@@ -15,15 +16,34 @@ public class Worker {
     Education education;
     Resume resume;
     
-  public   Worker(String name, Sex sex, Education education, Resume resume)
+  public   Worker(String name, Sex sex, Education education, Resume resume, LocalDate date)
     {
         this.name = name;
         this.sex = sex;
         this.education = education;
         this.resume = resume;
+        this.date = date;
         
     }
 
+    public Worker(String name, Sex sex, LocalDate date, String phone, Language language, 
+                  Education education, Resume resume) {
+        this.name = name;
+        this.sex = sex;
+        this.date = date;
+        this.phone = phone;
+        this.language = language;
+        this.education = education;
+        this.resume = resume;
+    }
+
+    public int age ( )//возраст
+    {
+        LocalDate now = new LocalDate();
+                
+       return now.getYear() - this.date.getYear();
+    }
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

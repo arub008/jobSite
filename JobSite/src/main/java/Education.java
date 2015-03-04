@@ -10,8 +10,12 @@ public class Education {
   public  Education(String institution_name){
 
         this.institution_name = institution_name;
+      
+    }
 
-        
+    public Education(LocalDate date, String institution_name) {
+        this.date = date;
+        this.institution_name = institution_name;
     }
 
     @Override

@@ -5,14 +5,21 @@ public class Resume {
     String job_name; //Желаемая должность
     String job_city;
     String salary; //Желаемая зарплата
-    String info;
+    String info; //информация
     
     public Resume(String job_name){
         this.job_name = job_name;
         
     }
-    
-   @Override
+
+    public Resume(String job_name, String job_city, String salary, String info) {
+        this.job_name = job_name;
+        this.job_city = job_city;
+        this.salary = salary;
+        this.info = info;
+    }
+
+    @Override
    public String toString()
    {
        return " \\ резюме - " + job_name;

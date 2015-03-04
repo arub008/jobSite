@@ -12,7 +12,13 @@ public class Job {
         this.job_city = job_city;
         
     }
-    
+
+    public Job(String job_name, String job_city, String job_info) {
+        this.job_name = job_name;
+        this.job_city = job_city;
+        this.job_info = job_info;
+    }
+
     @Override
     public String toString(){
         return " \\ вакансия " + job_name + " \\ город " + job_city;

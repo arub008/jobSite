@@ -12,9 +12,10 @@ public class Main {
 
         public static void main( String[] args )
         {
-            Worker worker1  = new Worker("Pall Dornon", Sex.MALE, new Education("Спбгу"), new Resume("Бухгалтер") );
-            Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new Education("МГППУ"), new Resume("Поэтесса"));
-       
+            Worker worker1  = new Worker("Pall Dornon", Sex.MALE, new Education("Спбгу"), new Resume("Бухгалтер"), new LocalDate(1983,1,14));
+            System.out.println("worker1.age() = " + worker1.age());
+            Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new Education("МГППУ"), new Resume("Поэтесса"),  new LocalDate(1961,8,25));
+            System.out.println("worker2.age() = " + worker2.age());
 
             System.out.println("worker1 \\ " + worker1.toString());
             System.out.println("worker2 \\ " + worker2.toString());

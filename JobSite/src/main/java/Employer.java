@@ -14,6 +14,13 @@ public class Employer {
         this.job = vacancy;
     }
 
+    public Employer(String name, String phone, String site, String info, Job job) {
+        this.name = name;
+        this.phone = phone;
+        this.site = site;
+        this.info = info;
+        this.job = job;
+    }
 
     @Override
     public String toString(){

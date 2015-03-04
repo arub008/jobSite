@@ -16,7 +16,14 @@ public class JobExperience {
         this.job_name = job_name;
         
     }
-    
+
+    public JobExperience(LocalDate start, LocalDate finish, String job_name, Employer employer) {
+        this.start = start;
+        this.finish = finish;
+        this.job_name = job_name;
+        this.employer = employer;
+    }
+
     public JobExperience(){
 
     }
