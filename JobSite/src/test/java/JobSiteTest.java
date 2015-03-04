@@ -1,6 +1,3 @@
-import Worker.Worker;
-import Worker.Sex;
-import junit.framework.Assert;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -24,7 +21,8 @@ public class JobSiteTest
      *
      * @param testName name of the test case
      */
-   //@Test
+  // @Test
+   
   // public
    
    
@@ -43,18 +41,11 @@ public class JobSiteTest
         return new TestSuite( JobSiteTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        
-        assertTrue( true );
-    }
+    
 
    /* public void WorkerCreateTest(){
 
-Worker worker = new Worker( "Анатолий Иванов", Sex.MALE);
+Worker worker = new Worker( "Анатолий Иванов", Sex.MALE, new Education("СГТУ"), new Resume("монтер"));
         assertEquals(" Анатолий Иванов" , worker.toString());
     }*/
 }

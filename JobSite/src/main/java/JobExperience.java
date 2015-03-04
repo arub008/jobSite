@@ -1,19 +1,16 @@
-package Worker;
-import Employer.Employer;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Created by Anastasya on 02.03.2015.
  */
 public class JobExperience {
-    Date start; // начало работы
-    Date finish; //конец работы
+    LocalDate start; // начало работы
+    LocalDate finish; //конец работы
     String job_name; //должность
     Employer employer; //работодатель
     
     
-    public JobExperience(Date start, Date finish, String job_name){
+    public JobExperience(LocalDate start, LocalDate finish, String job_name){
         this.start = start;
         this.finish = finish;
         this.job_name = job_name;

@@ -1,17 +1,16 @@
-package Worker;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Created by Anastasya on 02.03.2015.
  */
 public class Education {
-    Date date; //дата окончания
+    LocalDate date; //дата окончания
     String institution_name; //учебное заведение
 
   public  Education(String institution_name){
 
         this.institution_name = institution_name;
+
         
     }
 

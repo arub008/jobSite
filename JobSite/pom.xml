@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ru.apache_maven</groupId>
+  <groupId>ar</groupId>
   <artifactId>JobSite</artifactId>
   <version>1.1</version>
   <packaging>jar</packaging>
@@ -19,7 +19,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
-      <scope>test</scope>
+
     </dependency>
   </dependencies>
 </project>

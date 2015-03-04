@@ -1,9 +1,4 @@
-package Worker;
-
-import Language.Language;
-import Resume.Resume;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Created by Anastasya on 02.03.2015.
@@ -14,7 +9,7 @@ public class Worker {
 
     String name;
     Sex sex;
-    Date date; //дата рождения
+   LocalDate date; //дата рождения
     String phone;
     Language language;
     Education education;

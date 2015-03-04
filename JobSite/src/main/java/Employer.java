@@ -1,6 +1,3 @@
-package Employer;
-import Job.Job;
-
 /**
  * Created by Anastasya on 02.03.2015.
  */
