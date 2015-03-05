@@ -25,24 +25,31 @@ public class Worker {
         this.name = name;
         this.sex = sex;
         this.date = date;
+        this.education = new ArrayList<String>();
+        this.language = new ArrayList<String>();
+        this.resume = new ArrayList<Resume>();
+        this.job_experience = new ArrayList<String>();
         
     }
 
-    public Worker(String name, Sex sex, LocalDate date, String phone, List<String> language, List<String> education, List<Resume> resume, List<String> job_experience) {
+    public Worker(String name, Sex sex, LocalDate date, String phone) {
         this.name = name;
         this.sex = sex;
         this.date = date;
         this.phone = phone;
-        this.language = language;
-        this.education = education;
-        this.resume = resume;
-        this.job_experience = job_experience;
+        this.language = new ArrayList<String>();
+        this.education = new ArrayList<String>();
+        this.resume = new ArrayList<Resume>();
+        this.job_experience = new ArrayList<String>();
     }
+    
+    public void addEdu(String s){//добавить образование
+        education.add(s);
+    } 
 
-    public int age ( )//возраст
+    public int ageCount( )//возраст
     {
         LocalDate now = new LocalDate();
-                
        return now.getYear() - this.date.getYear();
     }
 
@@ -82,8 +89,11 @@ public class Worker {
     @Override
     public String toString(){
 
-        return "ФИО: " + name + sex.toString() + (education !=null ? education.toString() : 0) 
-                + (resume != null ? resume.toString() : 0);
+        return "ФИО: " + name + sex.toString() + (education !=null ? " "+ education.toString() : "")
+                + (resume != null ? " " + resume.toString() : "")+ (date !=null ? " " + date.toString() : "")
+                + (phone !=null ? " " + phone.toString() : "") 
+                + (language !=null ? " " + language.toString() : "")
+                + (job_experience !=null ? " " + job_experience.toString() : "");
         
     }
 }

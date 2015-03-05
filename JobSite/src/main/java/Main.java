@@ -18,16 +18,14 @@ public class Main {
 
 
               Worker worker1 = new Worker("Pall Dornon", Sex.MALE, new LocalDate(1983, 1, 14));
-      //  worker1.education.add(new ArrayList<String>());
-            ArrayList<String> worker1_education = new ArrayList<String>();
-              worker1_education.add("Бухгалтер");
-              worker1.education = worker1_education.get(0);
-              System.out.println("worker1.age() = " + worker1.age());
-              //   Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new List<String>() Education("МГППУ"), new Resume("Поэтесса"), null);
-              // System.out.println("worker2.age() = " + worker2.age());
-
+              worker1.addEdu("СГту");
+              System.out.println("worker1.age() = " + worker1.ageCount());
+              worker1.addEdu("coursera");
+                Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new LocalDate(1969, 8, 27));
+               System.out.println("worker2.age() = " + worker2.ageCount());
+                worker2.addEdu("МГУ");
               System.out.println("worker1 \\ " + worker1.toString());
-        /*    System.out.println("worker2 \\ " + worker2.toString());*/
+           System.out.println("worker2 \\ " + worker2.toString());
 
        /*     Employer employer1 = new Employer("Apple", new Job("маркетолог", " Мск"));
             Employer employer2 = new Employer("Oracle", new Job("java программист", " LA"));

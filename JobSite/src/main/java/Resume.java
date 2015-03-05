@@ -22,7 +22,9 @@ public class Resume {
     @Override
    public String toString()
    {
-       return " \\ резюме - " + job_name;
+       return " \\ резюме - " + job_name + (job_city !=null ? " " + job_city.toString() : "")
+               + (salary !=0 ? " " + job_city.toString() : "")
+               + (info !=null ? " " + info.toString() : "");
        
    }
 
