@@ -1,6 +1,8 @@
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
+import java.util.ArrayList;
+
 /**
  * Created by Anastasya on 02.03.2015.
  */
@@ -12,11 +14,11 @@ public class Worker {
     Sex sex;
    LocalDate date; //дата рождения
     String phone;
-    Language language;
-    Education education;
+    ArrayList<String> language;
+    ArrayList<Education> education;
     Resume resume;
     
-  public   Worker(String name, Sex sex, Education education, Resume resume, LocalDate date)
+  public   Worker(String name, Sex sex, ArrayList<Education> education, Resume resume, LocalDate date)
     {
         this.name = name;
         this.sex = sex;
@@ -26,8 +28,8 @@ public class Worker {
         
     }
 
-    public Worker(String name, Sex sex, LocalDate date, String phone, Language language, 
-                  Education education, Resume resume) {
+    public Worker(String name, Sex sex, LocalDate date, String phone, ArrayList<String> language, ArrayList<Education> education,
+                  Resume resume) {
         this.name = name;
         this.sex = sex;
         this.date = date;
@@ -43,7 +45,7 @@ public class Worker {
                 
        return now.getYear() - this.date.getYear();
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,7 +55,7 @@ public class Worker {
 
         if (date != null ? !date.equals(worker.date) : worker.date != null) return false;
         if (education != null ? !education.equals(worker.education) : worker.education != null) return false;
-        if (language != worker.language) return false;
+        if (language != null ? !language.equals(worker.language) : worker.language != null) return false;
         if (!name.equals(worker.name)) return false;
         if (phone != null ? !phone.equals(worker.phone) : worker.phone != null) return false;
         if (resume != null ? !resume.equals(worker.resume) : worker.resume != null) return false;
