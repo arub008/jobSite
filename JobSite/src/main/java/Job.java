@@ -21,7 +21,9 @@ public class Job {
 
     @Override
     public String toString(){
-        return " \\ вакансия " + job_name + " \\ город " + job_city;
+        return " \\ вакансия " + job_name +
+                (job_city !=null ? " \\ город " + job_city.toString() : "")
+                +  (job_info !=null ? " \\ инфо " + job_info.toString() : "");
         
     }
 

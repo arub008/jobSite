@@ -21,17 +21,23 @@ public class Main {
               worker1.addEdu("СГту");
               System.out.println("worker1.age() = " + worker1.ageCount());
               worker1.addEdu("coursera");
+              worker1.addResume(new Resume("Бухгалтер"));
+              worker1.addResume(new Resume("Водитель"));
                 Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new LocalDate(1969, 8, 27));
                System.out.println("worker2.age() = " + worker2.ageCount());
                 worker2.addEdu("МГУ");
               System.out.println("worker1 \\ " + worker1.toString());
            System.out.println("worker2 \\ " + worker2.toString());
 
-       /*     Employer employer1 = new Employer("Apple", new Job("маркетолог", " Мск"));
-            Employer employer2 = new Employer("Oracle", new Job("java программист", " LA"));
+            Employer employer1 = new Employer("Apple");
+            Employer employer2 = new Employer("Oracle", "Popular company");
+              employer1.addPhone("812 - 888 - 888 -9");
+              employer2.addJob(new Job("программист","LA"));
+              
+              employer1.addJob(new Job("архитектор","Спб", "ищем позитивных людей"));
 
             System.out.println("employer1 \\ " + employer1.toString());
-            System.out.println("employer2 \\ " + employer2.toString());*/
+            System.out.println("employer2 \\ " + employer2.toString());
 
           }
           catch (Exception e)

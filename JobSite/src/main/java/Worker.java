@@ -42,7 +42,11 @@ public class Worker {
         this.resume = new ArrayList<Resume>();
         this.job_experience = new ArrayList<String>();
     }
-    
+
+    public void addResume(Resume res) {
+        resume.add(res);
+    }
+
     public void addEdu(String s){//добавить образование
         education.add(s);
     } 
