@@ -2,6 +2,7 @@ import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Anastasya on 02.03.2015.
@@ -14,22 +15,20 @@ public class Worker {
     Sex sex;
    LocalDate date; //дата рождения
     String phone;
-    ArrayList<String> language;
-    ArrayList<Education> education;
-    Resume resume;
+    List<String> language;
+    List<String> education; //образование
+    List<Resume> resume; //резюме
+    List<String> job_experience; // опыт работы
     
-  public   Worker(String name, Sex sex, ArrayList<Education> education, Resume resume, LocalDate date)
+  public   Worker(String name, Sex sex, LocalDate date)
     {
         this.name = name;
         this.sex = sex;
-        this.education = education;
-        this.resume = resume;
         this.date = date;
         
     }
 
-    public Worker(String name, Sex sex, LocalDate date, String phone, ArrayList<String> language, ArrayList<Education> education,
-                  Resume resume) {
+    public Worker(String name, Sex sex, LocalDate date, String phone, List<String> language, List<String> education, List<Resume> resume, List<String> job_experience) {
         this.name = name;
         this.sex = sex;
         this.date = date;
@@ -37,6 +36,7 @@ public class Worker {
         this.language = language;
         this.education = education;
         this.resume = resume;
+        this.job_experience = job_experience;
     }
 
     public int age ( )//возраст
@@ -55,6 +55,8 @@ public class Worker {
 
         if (date != null ? !date.equals(worker.date) : worker.date != null) return false;
         if (education != null ? !education.equals(worker.education) : worker.education != null) return false;
+        if (job_experience != null ? !job_experience.equals(worker.job_experience) : worker.job_experience != null)
+            return false;
         if (language != null ? !language.equals(worker.language) : worker.language != null) return false;
         if (!name.equals(worker.name)) return false;
         if (phone != null ? !phone.equals(worker.phone) : worker.phone != null) return false;
@@ -73,13 +75,15 @@ public class Worker {
         result = 31 * result + (language != null ? language.hashCode() : 0);
         result = 31 * result + (education != null ? education.hashCode() : 0);
         result = 31 * result + (resume != null ? resume.hashCode() : 0);
+        result = 31 * result + (job_experience != null ? job_experience.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString(){
 
-        return "ФИО: " + name + sex.toString() + education.toString() + resume.toString();
+        return "ФИО: " + name + sex.toString() + (education !=null ? education.toString() : 0) 
+                + (resume != null ? resume.toString() : 0);
         
     }
 }

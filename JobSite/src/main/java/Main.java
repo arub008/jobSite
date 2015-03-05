@@ -2,7 +2,9 @@ import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Anastasya on 02.03.2015.
@@ -12,24 +14,33 @@ public class Main {
 
         public static void main( String[] args )
         {
-            Worker worker1  = new Worker("Pall Dornon", Sex.MALE, new Education("Спбгу"), new Resume("Бухгалтер"), new LocalDate(1983,1,14));
-            System.out.println("worker1.age() = " + worker1.age());
-            Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new Education("МГППУ"), new Resume("Поэтесса"),  null);
-           // System.out.println("worker2.age() = " + worker2.age());
+          try {
 
-            System.out.println("worker1 \\ " + worker1.toString());
-            System.out.println("worker2 \\ " + worker2.toString());
 
-            Employer employer1 = new Employer("Apple", new Job("маркетолог", " Мск"));
+              Worker worker1 = new Worker("Pall Dornon", Sex.MALE, new LocalDate(1983, 1, 14));
+      //  worker1.education.add(new ArrayList<String>());
+            ArrayList<String> worker1_education = new ArrayList<String>();
+              worker1_education.add("Бухгалтер");
+              worker1.education = worker1_education.get(0);
+              System.out.println("worker1.age() = " + worker1.age());
+              //   Worker worker2  = new Worker("Ara Falek", Sex.FEMALE, new List<String>() Education("МГППУ"), new Resume("Поэтесса"), null);
+              // System.out.println("worker2.age() = " + worker2.age());
+
+              System.out.println("worker1 \\ " + worker1.toString());
+        /*    System.out.println("worker2 \\ " + worker2.toString());*/
+
+       /*     Employer employer1 = new Employer("Apple", new Job("маркетолог", " Мск"));
             Employer employer2 = new Employer("Oracle", new Job("java программист", " LA"));
 
             System.out.println("employer1 \\ " + employer1.toString());
-            System.out.println("employer2 \\ " + employer2.toString());
+            System.out.println("employer2 \\ " + employer2.toString());*/
 
-         // LocalDate result = new LocalDate();
-           // DateTime from = new DateTime(1997, 1, 1, 0, 0);
-
-      // System.out.println("date = " + from);
+          }
+          catch (Exception e)
+          {
+              System.out.println("e = " + e);
+              
+          }
             LocalDate now = new LocalDate();
             System.out.println("now = " + now);
             Date date = new Date();

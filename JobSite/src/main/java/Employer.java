@@ -1,15 +1,16 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Anastasya on 02.03.2015.
  */
 public class Employer {
     String name;
-    ArrayList<String> phone;
-    ArrayList<String> site;
+    List<String> phone;
+    List<String> site;
     String info; // о компании
 
-    ArrayList<Job> job; //вакансия компании
+    List<Job> job; //вакансия компании
 
     public Employer(String name, ArrayList<Job> vacancy){
         this.name = name;
